@@ -8,7 +8,7 @@ def test_get_tasks():
 
 def test_add_task():
     client = app.test_client()
-    response = client.post('/tasks', json={"title": "Estudiar CI con ganas"})
+    response = client.post('/tasks', json={"title": "Estudiar CI"})
     data = response.get_json()
     assert response.status_code == 201
     assert data['title'] == "Estudiar CI"
